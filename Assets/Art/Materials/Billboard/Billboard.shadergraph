@@ -10,9 +10,6 @@
             "m_Id": "9ae1550c25d24b02af3dd5df4ac06c8f"
         },
         {
-            "m_Id": "0f3ac38162894bdcb7f4113c520feff9"
-        },
-        {
             "m_Id": "ede3d4e8a4a845f7af723d76123218df"
         }
     ],
@@ -681,34 +678,6 @@
     },
     "m_matrix": -1,
     "m_MatrixType": 3
-}
-
-{
-    "m_SGVersion": 1,
-    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
-    "m_ObjectId": "0f3ac38162894bdcb7f4113c520feff9",
-    "m_Guid": {
-        "m_GuidSerialized": "bba56b8a-4e6a-4fe4-8038-578df88656e5"
-    },
-    "m_Name": "alpha",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "alpha",
-    "m_DefaultReferenceName": "_alpha",
-    "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
-    "m_DismissedVersion": 0,
-    "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
-    "m_Hidden": false,
-    "m_Value": 0.0,
-    "m_FloatType": 0,
-    "m_RangeValues": {
-        "x": 0.0,
-        "y": 1.0
-    }
 }
 
 {
@@ -2971,9 +2940,6 @@
         },
         {
             "m_Id": "9ae1550c25d24b02af3dd5df4ac06c8f"
-        },
-        {
-            "m_Id": "0f3ac38162894bdcb7f4113c520feff9"
         },
         {
             "m_Id": "ede3d4e8a4a845f7af723d76123218df"
