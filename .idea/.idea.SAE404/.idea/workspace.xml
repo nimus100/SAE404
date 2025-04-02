@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="04bfd30f-333f-4f16-9860-66d7e933ada9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SAE404/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SAE404/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Gameplay Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Gameplay Test.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GravityManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GravityManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +96,7 @@
       <workItem from="1743414039271" duration="871000" />
       <workItem from="1743583026394" duration="2191000" />
       <workItem from="1743600593656" duration="23000" />
-      <workItem from="1743600646089" duration="2436000" />
+      <workItem from="1743600646089" duration="2544000" />
     </task>
     <servers />
   </component>

@@ -30,7 +30,7 @@ public class GravityManager : MonoBehaviour {
         Debug.Log("Gravity disabled");
     }
 
-    [Button("Toggle Gravity")]
+    [Button("[debug] Toggle Gravity [debug]")]
     public void GravityToggle() {
         enableGravity = !enableGravity;
         SetGravity(enableGravity);
