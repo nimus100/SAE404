@@ -1,6 +1,8 @@
 using UnityEngine;
 
 public class DataProcessing : MonoBehaviour {
+    public SocketValidator[] sockets;
+    
     public static DataProcessing Instance;
 
     void Start() {

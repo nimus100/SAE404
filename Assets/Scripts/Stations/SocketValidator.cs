@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using PrimeTween;
 using Unity.Android.Gradle.Manifest;
@@ -15,6 +16,8 @@ public class SocketValidator : MonoBehaviour {
     private XRSocketInteractor socket;
     private AudioSource source;
 
+    private IXRSelectInteractable insertedIteractable;
+
     void Start() {
         socket = GetComponent<XRSocketInteractor>();
         socket.selectEntered.AddListener(OnItemInserted);
@@ -29,6 +32,7 @@ public class SocketValidator : MonoBehaviour {
 
     private void OnItemInserted(SelectEnterEventArgs args) {
         IXRSelectInteractable interactable = args.interactableObject;
+        insertedIteractable = interactable;
         XRGrabInteractable grabbedItem = interactable.transform.GetComponent<XRGrabInteractable>();
 
         if (grabbedItem != null) {
@@ -51,6 +55,18 @@ public class SocketValidator : MonoBehaviour {
 
     private void OnItemExited(SelectExitEventArgs args) {
         source.PlayOneShot(exitClip);
+        insertedIteractable = null;
+    }
+
+    public bool CanExitAnItem() {
+        return insertedIteractable != null;
+    }
+
+    public void ExitAnItem() {
+        socket.interactionManager.SelectExit(socket, insertedIteractable);
+        insertedIteractable.transform.GetComponent<Rigidbody>().AddForce(new Vector3(2, 0, 0), ForceMode.Impulse);
+        source.PlayOneShot(exitClip);
+        insertedIteractable = null;
     }
 
     private IEnumerator EjectWithGrabDelay(IXRSelectInteractable item) {
@@ -60,6 +76,7 @@ public class SocketValidator : MonoBehaviour {
         socket.interactionManager.SelectExit(socket, item);
         item.transform.GetComponent<Rigidbody>().AddForce(new Vector3(1, 0, 0), ForceMode.Impulse);
         source.PlayOneShot(failureClip);
+        insertedIteractable = null;
 
         // Disable collisions for a short time to prevent instant re-grab
         if (grab != null) {
