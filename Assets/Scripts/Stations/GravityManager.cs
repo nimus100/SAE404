@@ -20,14 +20,9 @@ public class GravityManager : MonoBehaviour {
         if (Instance == null)
             Instance = this;
     }
-    
-    public void GravityEnable() {
-        SetGravity(true);
-        Debug.Log("Gravity enabled");
-    }
-    public void GravityDisable() {
-        SetGravity(false);
-        Debug.Log("Gravity disabled");
+
+    public void addToGravityDisablable(Rigidbody rb) {
+        rigidbodies.Add(rb);
     }
 
     [Button("[debug] Toggle Gravity [debug]")]

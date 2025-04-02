@@ -39,10 +39,11 @@ public class SocketValidator : MonoBehaviour {
             }
             else {
                 DataProcessing.Instance.fillSocket((int) requiredColor);
-                Tween.Position(item.transform, 
-                    item.transform.position, 
-                    item.transform.position + new Vector3(-0.3f, 0, 0), 
-                    0.7f);
+                // item.enabled = false;
+                // Tween.Position(item.transform,
+                //     item.transform.position,
+                //     item.transform.position + new Vector3(-0.3f, 0, 0),
+                //     0.7f).OnComplete(() => item.enabled = true);
                 source.PlayOneShot(insertClip);
             }
         }
