@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 5174708735361385646}
   - component: {fileID: 2725648118800572108}
   - component: {fileID: 7053077268470480074}
+  - component: {fileID: 673883891608240507}
   m_Layer: 0
   m_Name: SocketItem
   m_TagString: Untagged
@@ -185,10 +186,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
-  forceThreshold: 2
-  hitClips:
-  - {fileID: 8300000, guid: ff70fbfa5dfea0f48b60c838b3f8a017, type: 3}
-  - {fileID: 8300000, guid: 8259d34ed15151442bf07f9580b5d29c, type: 3}
 --- !u!114 &2725648118800572108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -408,6 +405,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &673883891608240507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3213418623109108585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92065038511fc524991550efa39094ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitClips:
+  - {fileID: 8300000, guid: ff70fbfa5dfea0f48b60c838b3f8a017, type: 3}
+  - {fileID: 8300000, guid: 8259d34ed15151442bf07f9580b5d29c, type: 3}
+  forceThreshold: 2
 --- !u!1001 &1232470165130429955
 PrefabInstance:
   m_ObjectHideFlags: 0
