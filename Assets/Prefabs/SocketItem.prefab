@@ -201,7 +201,7 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 0}
   m_Colliders: []
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 3
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -421,6 +421,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ff70fbfa5dfea0f48b60c838b3f8a017, type: 3}
   - {fileID: 8300000, guid: 8259d34ed15151442bf07f9580b5d29c, type: 3}
   forceThreshold: 2
+  playFollowUp: 0
+  timeDelay: 1
+  followUpClips: []
 --- !u!1001 &1232470165130429955
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -131,7 +131,7 @@ MonoBehaviour:
   hitClips:
   - {fileID: 8300000, guid: ff70fbfa5dfea0f48b60c838b3f8a017, type: 3}
   - {fileID: 8300000, guid: 8259d34ed15151442bf07f9580b5d29c, type: 3}
-  forceThreshold: 1
+  forceThreshold: 0.3
   playFollowUp: 1
   timeDelay: 1
   followUpClips:

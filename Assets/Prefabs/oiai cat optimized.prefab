@@ -239,7 +239,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 68f6152903ef084459e64917e03ca597, type: 3}
   - {fileID: 8300000, guid: 1472ec9fa126cb1499731a9a21d6e913, type: 3}
   - {fileID: 8300000, guid: 4f7449f331643f342b9675202ecad925, type: 3}
-  forceThreshold: 0.5
+  forceThreshold: 0.3
   playFollowUp: 1
   timeDelay: 0.5
   followUpClips:

@@ -237,7 +237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitClips:
   - {fileID: 8300000, guid: 67edbbe43e3caae4aa1f4da6fdf38944, type: 3}
-  forceThreshold: 2
+  forceThreshold: 0.3
   playFollowUp: 0
   timeDelay: 1
   followUpClips: []
