@@ -12,13 +12,17 @@ public class GravityManager : MonoBehaviour {
     [Header("References")]
     public List<Rigidbody> rigidbodies = new List<Rigidbody>();
 
-    public static GravityManager Instance;
+    private static GravityManager Instance;
 
     private bool enableGravity = true;
 
     private void Start() {
         if (Instance == null)
             Instance = this;
+    }
+
+    public static GravityManager GetInstance() {
+        return Instance;
     }
 
     public void addToGravityDisablable(Rigidbody rb) {

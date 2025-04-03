@@ -16,8 +16,9 @@ public class SocketItem : MonoBehaviour {
 
     void Start() {
         source = GetComponent<AudioSource>();
-        GravityManager.Instance.addToGravityDisablable(GetComponent<Rigidbody>());
+        GravityManager.GetInstance().addToGravityDisablable(GetComponent<Rigidbody>());
     }
+    
     
     private void OnCollisionEnter(Collision collision)
     {
