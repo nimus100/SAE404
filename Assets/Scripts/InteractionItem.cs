@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -6,6 +7,10 @@ public class InteractionItem : MonoBehaviour
 {
     public AudioClip[] hitClips;
     public float forceThreshold = 2f;
+
+    public bool playFollowUp = false;
+    public float timeDelay = 1f;
+    public AudioClip[] followUpClips;
     
     private AudioSource source;
 
@@ -21,6 +26,8 @@ public class InteractionItem : MonoBehaviour
         if (collisionForce >= forceThreshold && hitClips.Length > 0)
         {
             PlayRandomSound(collisionForce);
+            if (playFollowUp)
+                StartCoroutine(WaitAndPlay(timeDelay));
         }
     }
 
@@ -33,5 +40,11 @@ public class InteractionItem : MonoBehaviour
             volume = (volume > 1f) ? 1f : volume;
             source.PlayOneShot(randomClip, volume);
         }
+    }
+
+    private IEnumerator WaitAndPlay(float waitTime) {
+        yield return new WaitForSeconds(waitTime);
+        
+        source.PlayOneShot(followUpClips[Random.Range(0, followUpClips.Length)]);
     }
 }

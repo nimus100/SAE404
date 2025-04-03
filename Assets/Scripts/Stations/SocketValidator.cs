@@ -37,18 +37,21 @@ public class SocketValidator : MonoBehaviour {
         if (grabbedItem != null) {
             SocketItem item = grabbedItem.GetComponent<SocketItem>();
 
-            if (item.color != requiredColor){
-                StartCoroutine(EjectWithGrabDelay(interactable));
+            if (item) {
+                if (item.color != requiredColor){
+                    StartCoroutine(EjectWithGrabDelay(interactable));
+                }
+                else {
+                    DataProcessing.Instance.fillSocket((int) requiredColor);
+                    // item.enabled = false;
+                    // Tween.Position(item.transform,
+                    //     item.transform.position,
+                    //     item.transform.position + new Vector3(-0.3f, 0, 0),
+                    //     0.7f).OnComplete(() => item.enabled = true);
+                    source.PlayOneShot(insertClip);
+                }
             }
-            else {
-                DataProcessing.Instance.fillSocket((int) requiredColor);
-                // item.enabled = false;
-                // Tween.Position(item.transform,
-                //     item.transform.position,
-                //     item.transform.position + new Vector3(-0.3f, 0, 0),
-                //     0.7f).OnComplete(() => item.enabled = true);
-                source.PlayOneShot(insertClip);
-            }
+            
         }
     }
 
